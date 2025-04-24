@@ -2,26 +2,29 @@ import 'package:user_repository/src/entites/user_enity.dart';
 
 class MyUser {
   String id;
+  String fullName;
   String email;
-  String full_name;
   String phone;
   String address;
+  String? pic;
 
   MyUser({
     required this.id,
     required this.email,
-    required this.full_name,
+    required this.fullName,
     required this.phone,
     required this.address,
+    required this.pic,
   });
 
   static MyUser empty() {
     return MyUser(
       id: '',
       email: '',
-      full_name: '',
+      fullName: '',
       phone: '',
       address: '',
+      pic: '',
     );
   }
 
@@ -29,9 +32,10 @@ class MyUser {
     return MyUser(
       id: entity.id,
       email: entity.email,
-      full_name: entity.full_name,
+      fullName: entity.fullName,
       phone: entity.phone,
       address: entity.address,
+      pic: entity.pic,
     );
   }
 
@@ -39,9 +43,10 @@ class MyUser {
     return UserEntity(
       id: id,
       email: email,
-      full_name: full_name,
+      fullName: fullName,
       phone: phone,
       address: address,
+      pic: pic,
     );
   }
 }
